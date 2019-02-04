@@ -1,0 +1,150 @@
+/* Page layer elements
+-----------------------*/
+@font-face {
+  font-family: 'PFDin-Regular5';
+  src: url('font/PFDin-Regular5.eot') format('embedded-opentype');
+}
+
+body{ margin: 0px; font: 2vh 'PFDin'; background-color: black;
+    display:flex; align-items: center;}
+div { box-sizing: border-box;}
+
+.bodyAligner{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+.wrapper {
+    /* background-color: lightgreen;  /*TESTER-*/ */
+    height:90vh;
+    display:flex;
+    align-items: flex-start;
+
+}
+.columns {
+    /* background-color:yellow; /*TESTER-*/ */
+    background-color: white;
+    width:9vw;
+    min-width: 80px;
+    margin: 0 3.4vw;
+    display:flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.cell{
+    /* background-color:lightgrey; /*TESTER-*/ */
+    background-color: white;
+    width:100%;
+    height:4vh;
+    min-height: 20px;
+    margin: 0.5vh 0;
+    display: table;
+    position: relative;
+    color:red;
+    display:flex;
+    align-items: center;
+}
+.cell>p{
+    display: table-cell;
+    vertical-align: middle
+}
+div[class^="t"]{
+    background-color: #ffffff;
+    position:absolute;
+    width: 9vw;
+    min-width: 80px;
+    height: 2vh;
+    min-height: 10px;
+    right:0;
+    top:25%;
+    transition: 0.2s; ease-in-out; */
+    opacity: 0.4;
+}
+
+div[class="Blnk"]{
+    background-color: #ffffff;
+    width: 9vw;
+    min-width: 80px;
+    height: 2vh;
+    min-height: 10px;
+    animation-name: hue;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+
+div[class^="tW"]{animation: autoreveal 8s 1s  infinite;}
+div[class="tIt"]{animation: autoreveal3 8s 1.5s  infinite;}
+
+div[class="tMake"]{animation: autoreveal 8s 3s  infinite;}
+
+div[class^="tD"]{animation: autoreveal 8s 5s  infinite;}
+
+div[class="tMakes"]{animation: autoreveal 8s 7s  infinite;}
+div[class^="tU"]{animation: autoreveal4 8s 7.7s  infinite;}
+
+
+/* 20 words class
+-----------------------*/
+
+div.tAfter:hover { width:4vw; min-width: 70px; background-color: red;}
+div.tBetter:hover { width:3vw; min-width: 50px; background-color: red;}
+div.tDo:hover { width:7vw; min-width: 50px; background-color: red;}
+div.tEver:hover { width:5vw; min-width: 50px; background-color: red;}
+div.tFaster:hover { width:3vw; min-width: 50px; background-color: red;}
+div.tHarder:hover { width:3vw; min-width: 50px; background-color: red;}
+div.tHour:hover { width:5vw; min-width: 50px; background-color: red;}
+div.tIs:hover { width:7vw; min-width: 90px; background-color: red;}
+div.tIt:hover { width:7vw; min-width: 90px; background-color: red;}
+div.tMake:hover { width:5vw; min-width: 50px; background-color: red;}
+div.tMakes:hover { width:4vw; min-width: 50px; background-color: red;}
+div.tMore:hover { width:5vw; min-width: 50px; background-color: red;}
+div.tNever:hover { width:4vw; min-width: 50px; background-color: red;}
+div.tOur:hover { width:6vw; min-width: 50px; background-color: red;}
+div.tOver:hover { width:5vw; min-width: 50px; background-color: red;}
+div.tStronger:hover { width:2vw; min-width: 50px; background-color: red;}
+div.tThan:hover { width:5vw; min-width: 50px; background-color: red;}
+div.tUs:hover { width:7vw; min-width: 90px; background-color: red;}
+div.tWork:hover { width:5vw; min-width: 50px; background-color: red;}
+
+@keyframes hue {
+  from {background-color: blue;}
+  50% {background-color: lightgreen;}
+  to {background-color: yellow;}
+}
+
+@keyframes autoreveal {
+    7%{ width:4vw; min-width: 50px; background-color: green;}
+    14% {width:9vw; min-width: 80px; background-color: white;}
+    100% {width:9vw; min-width: 80px; background-color: white;}
+}
+
+@keyframes autoreveal2 {
+    5%{ width:6vw; min-width: 50px; background-colored: green;}
+    10% {width:9vw; min-width: 80px; background-color: white;}
+    100% {width:9vw; min-width: 80px; background-color: white;}
+}
+
+@keyframes autoreveal3 {
+    5%{ width:6vw; min-width: 50px; background-color: blue;}
+    10% {width:9vw; min-width: 80px; background-color: white;}
+    28% {width:9vw; min-width: 80px; background-color: white;}
+    33%{ width:6vw; min-width: 50px; background-color: blue;}
+    38% {width:9vw; min-width: 80px; background-color: white;}
+    53% {width:9vw; min-width: 80px; background-color: white;}
+    58%{ width:6vw; min-width: 50px; background-color: blue;}
+    63% {width:9vw; min-width: 80px; background-color: white;}
+    100% {width:9vw; min-width: 80px; background-color: white;}
+}
+
+@keyframes autoreveal4 {
+    5%{ width:6vw; min-width: 50px; background-colored: green;}
+    10% {width:9vw; min-width: 80px; background-color: white;}
+    100% {width:9vw; min-width: 80px; background-color: white;}
+}

@@ -1,0 +1,282 @@
+body, html {
+  margin: 0;
+  overflow: hidden;
+}
+body {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    position: relative;
+    height: 100%;
+}
+h1 {
+    font-family: sans-serif;
+    font-size: 10vw;
+    line-height: -5vw;
+    margin:0;
+    color:white;
+}
+h2 {
+    font-family: sans-serif;
+    font-size: 1em;
+    line-height: 1.4em;
+    margin:0;
+}
+
+
+/* -----------------------------------
+    [ Z-Index index ]
+    Navigation Bar: 21
+    Title Text : 20
+    Floater images : 11~9
+    Each Page master div : 1~9
+    -----------------------------------*/
+
+
+/* titleBox Related
+---------------------------------------*/
+.tbWrapper{
+    position:absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 50;
+}
+.pgWrapper{
+    position:absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+#titleBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    min-height: 100px;
+    background-color: black;
+    transition: all .5s linear;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
+}
+.introText{
+    margin-top: 62vh;
+}
+/* titleBox animage widtch*/
+.tbL1{
+    width: 70vw;
+    min-width: 100px;
+}
+.tbL2{
+    width: 30vw;
+    min-width: 150px;
+}
+
+
+/* Image Parallax Related
+---------------------------------------*/
+.imgWrapper {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pImg {
+    position: absolute;
+    /* width: 120vw; */
+    height:120vh;
+    filter: drop-shadow(0px 25px 10px rgba(0, 0, 0, 0.2));
+}
+
+.mbPimg{
+    left:50%;
+}
+
+
+/* Each Page Related
+---------------------------------------*/
+.wrapper {
+    height: 100% !important;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    z-index: 0;
+}
+.main {
+  width: 100%;
+  margin: 0 auto;
+}
+
+body, .onepage-wrapper, html {
+  display: block;
+  /* position: static; */
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.onepage-wrapper {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  padding: 0;
+}
+.onepage-wrapper .section {
+  width: 100%;
+  height: 100%;
+}
+
+.main section  {
+  overflow: hidden;
+}
+
+/* Navigation Related
+---------------------------------------*/
+.onepage-pagination {
+  position: relative;
+  /* right: 10px; */
+  /* top: 45%; */
+  list-style: none;
+  margin: 0;
+  padding: 3px;
+  z-index: 60;
+  background-color: rgba(0, 0, 0, 0.64);
+
+}
+.onepage-pagination li {
+  padding: 0;
+  text-align: center;
+}
+.onepage-pagination li a{
+  padding: 10px;
+  width: 4px;
+  height: 4px;
+  display: block;
+}
+.onepage-pagination li a:before{
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  left: 12px;
+}
+.onepage-pagination li a.active:before{
+  width: 10px;
+  height: 10px;
+  background: none;
+  border: 4px solid white;
+  margin-top: -7px;
+  left: 7px;
+}
+
+.disabled-onepage-scroll .disabled-onepage-scroll .wrapper {
+  overflow: auto;
+}
+.disabled-onepage-scroll .onepage-wrapper .section {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+}
+.disabled-onepage-scroll .onepage-wrapper {
+  transform: none !important;
+  min-height: 100%;
+}
+.disabled-onepage-scroll .onepage-pagination {
+  display: none;
+}
+body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
+  position: inherit;
+}
+
+
+/* BG Divs Parallax animate
+---------------------------------------*/
+.main section div[class*="bg_wrap"]{
+  position: relative;
+  height: 120vh;
+  margin: 0 auto 0;
+  transition: all 0.8s ease;
+}
+.bg_down{
+    top:-60vh;
+}
+.bg_up{
+    top:-10vh;
+}
+
+.main section.page1 { background-color: rgba(205, 202, 193, 0.71);}
+.main section div.bg_wrap02{ background:url(../img/bg01.png) center/cover;}
+.main section div.bg_wrap03 { background:url(../img/bg02.png) center/cover;}
+.main section div.bg_wrap04 { background:url(../img/bg03.png) center/cover;}
+.main section div.bg_wrap05 { background:url(../img/bg04.jpg) center/cover;}
+.main section div.bg_wrap06 { background:url(../img/bg05.jpg) center/cover;}
+
+/* img elements  Parallax animate
+---------------------------------------*/
+.main section > img {
+  position: absolute;
+}
+
+
+body.disabled-onepage-scroll .onepage-wrapper  section {
+  min-height: 100%;
+  height: auto;
+}
+body.disabled-onepage-scroll .main section .page_container, body.disabled-onepage-scroll .main section.page3 .page_container  {
+  padding: 20px;
+  margin-top: 150px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body.disabled-onepage-scroll  section .page_container h1{
+  text-align: center;
+  font-size: 50px;
+}
+body.disabled-onepage-scroll .main section.page0 > img {
+  position: absolute;
+  width: 80%;
+  left: 10%;
+}
+body.disabled-onepage-scroll .main section.page1 > img {
+  position: absolute;
+  width: 80%;
+  left: 10%;
+}
+body.disabled-onepage-scroll .main section > img {
+  position: relative;
+  max-width: 80%;
+  bottom: 0;
+}
+body.disabled-onepage-scroll .main section.page3 .page_container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  right: 0;
+}
+
+/* for Mobile Text Change
+---------------------------*/
+.mobText{display:none;}
+
+@media screen and (max-width: 480px){
+
+    .mbImg{right:-50vw; }
+    .mbImg2{right:-70vw; }
+    .deskText{display: none;}
+    .mobText{display: inherit;}
+}
