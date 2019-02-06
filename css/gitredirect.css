@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'Athenaeum Std';
+    src: url('./font/AthenaeumStd-Bold.woff2') format('woff2'),
+        url('./font/AthenaeumStd-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+h1 {font:  bold 5em/1.2em 'Athenaeum Std'; color: white;}
+a{text-decoration: none;}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color:black;
+    overflow: hidden;
+}
+
+.bg{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: url(../img/scr011b.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+.wrapper{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color:red;
+    width:70vw; max-width: 1100px;
+    text-align:center;
+    padding: 30px;
+}
+@media screen and (max-width: 480px){
+    h1{ font-size: 1.5em;}
+    h2{ font-size: 1.2em;}
+    p{ font-size: 1em;}
+    .wrapper{ width: 95%;}
+}

@@ -21,31 +21,29 @@
     font-weight: 500;
     font-style: normal;
 }
-
-a:link {
-    color:lightgreen;
-}
-
-
 body{
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
 }
+.wrapper a:link {
+    text-decoration: none;
+    color:rgb(3, 104, 255);
+}
+.wrapper a:visited{color:rgb(4, 104, 255);}
+.wrapper a:active{color:lightgreen;}
+
 .wrapper{
+    position: absolute;
     font-family: 'Athenaeum Std';
     font-weight: bold;
     font-style: normal;
     font-size: 3.1vw;
     line-height: 4.3vw;
     width:80vw;
+    height: 90vh;
 }
-
-.modalHov{
-    color:lightgreen;
-}
-
 
 /* iframe
 -----------------------*/
@@ -53,10 +51,11 @@ body{
     filter: blur(8px);
 }
 .bgblue{
-    background-color: rgba(0, 48, 255, 0.66);
+    background-color: rgba(0, 48, 255,1);
+    /* overflow: hidden; */
 }
 .popup{
-    position: absolute;
+    position: fixed;
     width:100vw;
     height: 100vh;
     display: flex;
@@ -68,8 +67,8 @@ body{
     overflow: hidden;
     width: 80vw;
     height: 50vw;
+    position: relative;
 }
-
 .ifr {
     position: relative;
     width: 200%;
@@ -79,14 +78,12 @@ body{
     transform-origin: 0 0;
     background-color: white;
 }
-
 .ifrg {
     position: relative;
     width: 100%;
     height: 100%;
     border: 0;
 }
-
 .ifri {
     width: 125%;
     height: 125%;
@@ -95,21 +92,26 @@ body{
     transform-origin: 0 0;
     background-color: white;
 }
-
 .close{
-    color: white;
-    font-size: 10vh;
     text-decoration: none;
+    color: white;
+    font-size: 5vh;
+    cursor: pointer;
 }
-
 .bufTxt{
     color: white;
     font-size: 5vh;
     text-decoration: none;
 }
-
+.bufTxt a{
+    color: white;
+    font-size: 5vh;
+    text-decoration: none;
+}
 .ifrBuffer{
-    height: 20vh;
+    color: white;
+    height: 10vh;
+    min-height: 30px;
     display:flex;
     align-items: center;
 }
@@ -117,7 +119,7 @@ body{
 /* Tooltip
 -----------------------*/
 .tTp {
-    text-decoration:none;
+    /* text-decoration:none; */
     /* position:relative; */
 }
 .tTp span {
@@ -128,20 +130,74 @@ body{
     filter: drop-shadow(0px 15px 8px rgba(0, 133, 255, 0.62));
     margin-bottom: :5vw;
 }
-
 .tTp:hover span {
     display:block;
     position:fixed;
     overflow:hidden;
 }
 
+.loading{
+    position: absolute;
+    color: white;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    opacity:0.8;
 
+}
+.loadContainer{
+    color:rgba(255, 255, 255, 0.4)
+}
 /* CSS For Mobile
 -----------------------*/
 @media screen and (max-width: 480px){
-
     .wrapper{
         font-size: 1.8em;
         line-height: 1.2em;
+    }
+    .close{
+        font-size: 32px;
+        width: 100vw;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .bufTxt{
+        width: 100vw;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .bufTxt a{
+        font-size: 32px;
+        line-height: 45px;
+    }
+
+    .wrap{
+        display:block;
+        width: 100%;
+        height: auto;
+        /* height: 400px; */
+    }
+
+    .popup
+    {height: 90vh;}
+    .wrap img{
+        width: 100%;
+    }
+
+    .loading{
+        background-color: rgba(0, 0, 0, 0);
+        z-index: -1;
+
+    }
+    .loadContainer{
+        color:rgba(255, 255, 255, 0.4)
     }
 }

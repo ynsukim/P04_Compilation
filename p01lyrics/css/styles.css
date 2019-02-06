@@ -1,4 +1,4 @@
-/* Page layer elements
+/* Global elements
 -----------------------*/
 @font-face {
   font-family: 'PFDin-Regular5';
@@ -73,7 +73,7 @@ div[class="Blnk"]{
     height: 2vh;
     min-height: 10px;
     animation-name: hue;
-    animation-duration: 4s;
+    animation-duration: 1s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
   }
@@ -93,25 +93,25 @@ div[class^="tU"]{animation: autoreveal4 8s 7.7s  infinite;}
 /* 20 words class
 -----------------------*/
 
-div.tAfter:hover { width:4vw; min-width: 70px; background-color: red;}
-div.tBetter:hover { width:3vw; min-width: 50px; background-color: red;}
-div.tDo:hover { width:7vw; min-width: 50px; background-color: red;}
-div.tEver:hover { width:5vw; min-width: 50px; background-color: red;}
-div.tFaster:hover { width:3vw; min-width: 50px; background-color: red;}
-div.tHarder:hover { width:3vw; min-width: 50px; background-color: red;}
-div.tHour:hover { width:5vw; min-width: 50px; background-color: red;}
-div.tIs:hover { width:7vw; min-width: 90px; background-color: red;}
-div.tIt:hover { width:7vw; min-width: 90px; background-color: red;}
-div.tMake:hover { width:5vw; min-width: 50px; background-color: red;}
-div.tMakes:hover { width:4vw; min-width: 50px; background-color: red;}
-div.tMore:hover { width:5vw; min-width: 50px; background-color: red;}
-div.tNever:hover { width:4vw; min-width: 50px; background-color: red;}
-div.tOur:hover { width:6vw; min-width: 50px; background-color: red;}
-div.tOver:hover { width:5vw; min-width: 50px; background-color: red;}
-div.tStronger:hover { width:2vw; min-width: 50px; background-color: red;}
-div.tThan:hover { width:5vw; min-width: 50px; background-color: red;}
-div.tUs:hover { width:7vw; min-width: 90px; background-color: red;}
-div.tWork:hover { width:5vw; min-width: 50px; background-color: red;}
+div.tAfter:hover    { width:2vw; min-width: 30px; background-color: red;}
+div.tBetter:hover   { width:2vw; min-width: 30px; background-color: red;}
+div.tDo:hover       { width:6vw; min-width: 30px; background-color: red;}
+div.tEver:hover     { width:5vw; min-width: 30px; background-color: red;}/* TEMP:  */
+div.tFaster:hover   { width:2vw; min-width: 30px; background-color: red;}
+div.tHarder:hover   { width:2vw; min-width: 30px; background-color: red;}
+div.tHour:hover     { width:4vw; min-width: 30px; background-color: red;}
+div.tIs:hover       { width:6vw; min-width: 90px; background-color: red;}
+div.tIt:hover       { width:6vw; min-width: 90px; background-color: red;}
+div.tMake:hover     { width:4vw; min-width: 30px; background-color: red;}
+div.tMakes:hover    { width:3vw; min-width: 30px; background-color: red;}
+div.tMore:hover     { width:4vw; min-width: 30px; background-color: red;}
+div.tNever:hover    { width:3vw; min-width: 30px; background-color: red;}
+div.tOur:hover      { width:5vw; min-width: 30px; background-color: red;}
+div.tOver:hover     { width:4vw; min-width: 30px; background-color: red;}
+div.tStronger:hover { width:1vw; min-width: 30px; background-color: red;}
+div.tThan:hover     { width:4vw; min-width: 30px; background-color: red;}
+div.tUs:hover       { width:5vw; min-width: 90px; background-color: red;}
+div.tWork:hover     { width:4vw; min-width: 30px; background-color: red;}
 
 @keyframes hue {
   from {background-color: blue;}
@@ -120,31 +120,31 @@ div.tWork:hover { width:5vw; min-width: 50px; background-color: red;}
 }
 
 @keyframes autoreveal {
-    7%{ width:4vw; min-width: 50px; background-color: green;}
-    14% {width:9vw; min-width: 80px; background-color: white;}
+    7%   {width:2vw; min-width: 30px; background-color: green;}
+    14%  {width:9vw; min-width: 80px; background-color: white;}
     100% {width:9vw; min-width: 80px; background-color: white;}
 }
 
 @keyframes autoreveal2 {
-    5%{ width:6vw; min-width: 50px; background-colored: green;}
-    10% {width:9vw; min-width: 80px; background-color: white;}
+    5%   {width:4vw; min-width: 30px; background-colored: green;}
+    10%  {width:9vw; min-width: 80px; background-color: white;}
     100% {width:9vw; min-width: 80px; background-color: white;}
 }
 
 @keyframes autoreveal3 {
-    5%{ width:6vw; min-width: 50px; background-color: blue;}
-    10% {width:9vw; min-width: 80px; background-color: white;}
-    28% {width:9vw; min-width: 80px; background-color: white;}
-    33%{ width:6vw; min-width: 50px; background-color: blue;}
-    38% {width:9vw; min-width: 80px; background-color: white;}
-    53% {width:9vw; min-width: 80px; background-color: white;}
-    58%{ width:6vw; min-width: 50px; background-color: blue;}
-    63% {width:9vw; min-width: 80px; background-color: white;}
+    5%   {width:4vw; min-width: 30px; background-color: blue;}
+    10%  {width:9vw; min-width: 80px; background-color: white;}
+    28%  {width:9vw; min-width: 80px; background-color: white;}
+    33%  {width:4vw; min-width: 30px; background-color: blue;}
+    38%  {width:9vw; min-width: 80px; background-color: white;}
+    53%  {width:9vw; min-width: 80px; background-color: white;}
+    58%  {width:4vw; min-width: 30px; background-color: blue;}
+    63%  {width:9vw; min-width: 80px; background-color: white;}
     100% {width:9vw; min-width: 80px; background-color: white;}
 }
 
 @keyframes autoreveal4 {
-    5%{ width:6vw; min-width: 50px; background-colored: green;}
-    10% {width:9vw; min-width: 80px; background-color: white;}
+    5%   {width:4vw; min-width: 30px; background-colored: green;}
+    10%  {width:9vw; min-width: 80px; background-color: white;}
     100% {width:9vw; min-width: 80px; background-color: white;}
 }

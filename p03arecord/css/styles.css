@@ -1,3 +1,6 @@
+/* Global Elements
+-----------------------*/
+
 body, html {
   margin: 0;
   overflow: hidden;
@@ -11,15 +14,17 @@ body {
 }
 h1 {
     font-family: sans-serif;
-    font-size: 10vw;
+    font-size: 9vw;
     line-height: -5vw;
     margin:0;
     color:white;
+    word-break: break-word;
+     hyphens: auto;
 }
 h2 {
     font-family: sans-serif;
-    font-size: 1em;
-    line-height: 1.4em;
+    font-size: 1.4vw;
+    line-height: 1.8vw;
     margin:0;
 }
 
@@ -58,26 +63,31 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20vh;
-    min-height: 100px;
     background-color: black;
-    transition: all .5s linear;
+    transition: all .3s linear;
     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 }
 .introText{
     margin-top: 62vh;
 }
 /* titleBox animage widtch*/
 .tbL1{
+    height: 18vh;
+    min-height: 130px;
     width: 70vw;
     min-width: 100px;
 }
 .tbL2{
-    width: 30vw;
-    min-width: 150px;
+    height: 20vh;
+    min-height: 100px;
+    width: 25vw;
+    min-width: 100px;
 }
 
-
+.span{
+    background-color: red;
+}
 /* Image Parallax Related
 ---------------------------------------*/
 .imgWrapper {
@@ -93,14 +103,16 @@ h2 {
     position: absolute;
     /* width: 120vw; */
     height:120vh;
-    filter: drop-shadow(0px 25px 10px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(0px 25px 10px rgba(0, 0, 0, 0.1));
 }
 
 .mbPimg{
     left:50%;
 }
 
-
+.page2{
+    background-color: rgb(209, 209, 209)
+}
 /* Each Page Related
 ---------------------------------------*/
 .wrapper {
@@ -271,12 +283,30 @@ body.disabled-onepage-scroll .main section.page3 .page_container {
 
 /* for Mobile Text Change
 ---------------------------*/
-.mobText{display:none;}
+.mobText{
+    display:none;
+    color: rgb(73, 52, 238);
+}
+
+
+
 
 @media screen and (max-width: 480px){
-
+    .tbL1 {height: 190px; width: 190px; padding:20px; text-align: left;}
+    .tbL2 {height: 160px; width: 160px; padding:0px; }
+    .tbL1 #title{font-size: 14vw; line-height: 16vw;}
+    .tbL2 #title{font-size: 12vw;}
+    .introText{ margin-top: 69vh;}
     .mbImg{right:-50vw; }
     .mbImg2{right:-70vw; }
     .deskText{display: none;}
     .mobText{display: inherit;}
+    h2 {font-size: 16px; line-height: 18px; }
+}
+@media screen and (min-width: 481px) and (max-width: 1100px){
+    h2 { font-size: 16px; line-height: 18px; }
+}
+
+@media screen and (max-height: 500px){
+    .introText{ margin-top: 70vh;}
 }

@@ -6,11 +6,10 @@ $(document).ready(function () {
 var observer = new MutationObserver(function(mutations) {
       mutations.forEach(function(mutation) {
         if (mutation.attributeName === "class") {
-
             if ($("body").hasClass("viewing-page-1")){
                 $('.bg_wrap02').addClass('bg_down').removeClass('bg_up')
-                $("#title").empty().hide().append("a restrospect").fadeIn(500)
-                $(".introText").hide().fadeIn(500)
+                $("#title").empty().hide().append("a restrospect").fadeIn(300)
+                $(".introText").hide().fadeIn(300)
                 $("#titleBox").removeClass("tbL2") .addClass("tbL1")
                 }
             else if ($("body").hasClass("viewing-page-2")){
@@ -52,16 +51,6 @@ var observer = new MutationObserver(function(mutations) {
     });
 });
 
-// var is_mobile = false;
-//
-// if( $('.deskText').css('display')=='none') { is_mobile = true;};
-//
-// if (is_mobile == true) {
-//     $('.deskText').empty().append("tap through from menu on the left ")
-// };
-
-
-
 
 /* JS for Mouse Paralax
 -----------------------------*/
@@ -80,6 +69,7 @@ function parallaxIt(e, target, movement) {
   var relY = e.pageY - $this.offset().top;
 
   TweenMax.to(target, 1, {
+
     x: (relX - $this.width() / 2) / $this.width() * movement,
     y: (relY - $this.height() / 2) / $this.height() * movement
   });

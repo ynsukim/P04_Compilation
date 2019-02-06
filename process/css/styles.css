@@ -1,0 +1,73 @@
+/* Global styles
+-----------------------*/
+@font-face {
+    font-family: 'Athenaeum Std';
+    src: url('../font/AthenaeumStd-Bold.woff2') format('woff2'),
+        url('../font/AthenaeumStd-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Athenaeum Std';
+    src: url('../font/AthenaeumStd-Italic.woff2') format('woff2'),
+        url('../font/AthenaeumStd-Italic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Athenaeum Std';
+    src: url('../font/AthenaeumStd.woff2') format('woff2'),
+        url('../font/AthenaeumStd.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+body{
+    font-family: 'Athenaeum Std';
+    font-weight: bold;
+    text-align: center;
+    background-color: black;
+    background-image: url('../img/bg.gif');
+    background-attachment: fixed;
+    background-size: 15%;
+}
+.wrapper{
+    width: 75%;
+    max-width: 1000px;
+    margin: auto;
+}
+.titleWrapper{
+    width: 80%;
+    max-width: 700px;
+    margin: auto;
+}
+h1{
+    color:rgb(78, 111, 255);
+    margin-bottom: 0;
+    font-size: 3em;
+}
+h2{
+    color:rgb(145, 165, 254);
+    font-size: 1.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+}
+p{
+    margin-bottom: 0;
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.9);
+}
+img{
+    width: 100%;
+    display: inline-block;
+}
+
+a{color: rgb(145, 165, 254)}
+a:visited{color: rgb(145, 165, 254)}
+/* CSS For Mobile
+-----------------------*/
+@media screen and (max-width: 480px){
+    h1{ font-size: 1.5em;}
+    h2{ font-size: 1.2em;}
+    p{ font-size: 1em;}
+    .wrapper{ width: 95%;}
+}
