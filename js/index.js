@@ -43,6 +43,8 @@ window.onmousemove = function (e) {
     for (var i = 0; i < tooltips.length; i++) {
         tooltips[i].style.top = y;
         tooltips[i].style.left = x;
+
+
     }
 };
 
@@ -55,6 +57,13 @@ $(".popup").hide();
 $(".tTp").click(function (e) {
     e.preventDefault();
 
+    var newWin =  $(this).attr('href');
+    $('.bufTxt a').attr('href',this);
+    $(".popup").fadeIn('slow');
+    $('.wrapper').addClass('bgblur')
+    $('body').addClass('bgblue')
+
+
     if (window.matchMedia('(max-width: 480px)').matches){
         $("iframe").hide();
         var iNo = $(this).attr("class").slice(-2);
@@ -62,20 +71,19 @@ $(".tTp").click(function (e) {
         console.log(iNo);
         $('.wrap a').show().attr("href",hRef);
         $('.wrap img').show().attr("src","./img/scr"+iNo+".png");
+        $('.ln01').attr('href','https://www.instagram.com/yo_onkim/');
         $('.ln11').attr('href','https://www.github.com/ynsukim');
     }
     else{
         $(".wrap img").hide();
         $("iframe").show().attr("src", $(this).attr('href'));
 
+        var iNo = $(this).attr("class").slice(-2);
+        if (iNo=01) {  $('.bufTxt a').attr('href','https://www.instagram.com/yo_onkim/');}
+        if (iNo=11) {  $('.bufTxt a').attr('href','https://www.github.com/ynsukim');}
     }
 
-    var newWin =  $(this).attr('href');
-    $('.bufTxt a').attr('href',this);
 
-    $(".popup").fadeIn('slow');
-    $('.wrapper').addClass('bgblur')
-    $('body').addClass('bgblue')
 
 });
 

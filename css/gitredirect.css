@@ -13,7 +13,7 @@ a{text-decoration: none;}
 body {
     margin: 0;
     padding: 0;
-    background-color:black;
+    /* background-color:black; */
     overflow: hidden;
 }
 
@@ -33,13 +33,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
 }
 
 .container{
-    background-color:red;
+    background-color:rgba(0, 0, 0, 0.71);
     width:70vw; max-width: 1100px;
     text-align:center;
     padding: 30px;
+}
+.wrapper:hover{
+    opacity: 1;
+    transition: all 0.5s ease;
 }
 @media screen and (max-width: 480px){
     h1{ font-size: 1.5em;}
