@@ -1,38 +1,28 @@
-/* Apend Link href
----------------------*/
-$('.ln01').attr('href','./about.html');
-$('.ln02').attr('href','./p01lyrics/index.html');
-$('.ln03').attr('href','./p02dedesign/index.html');
-$('.ln04').attr('href','./p03arecord/index.html');
-$('.ln05').attr('href','./index.html');
-$('.ln06').attr('href','https://docs.google.com/document/d/1CdiIGnYWyjqv0vz5FMSx1BPO_1rEVQ6Hnjg059rtFZw/edit?usp=sharing');
-$('.ln07').attr('href','./e00sevenprinciple/index.html');
-$('.ln08').attr('href','./e01mullerbrockmann/index.html');
-$('.ln09').attr('href','https://docs.google.com/spreadsheets/d/1pi55Tq7avJC-mmYdkzJB_RocdH6BSAnkr2IK3mOQb2g/edit?usp=sharing');
+
+// Link List
+$('.ln1').attr('href','about.html');
+$('.ln2').attr('href','./p01lyrics/index.html');
+$('.ln3').attr('href','./p02dedesign/index.html');
+$('.ln4').attr('href','./p03arecord/index.html');
+$('.ln5').attr('href','index.html');
+$('.ln6').attr('href','https://docs.google.com/document/d/1CdiIGnYWyjqv0vz5FMSx1BPO_1rEVQ6Hnjg059rtFZw/edit?usp=sharing');
+$('.ln7').attr('href','./e00sevenprinciple/index.html');
+$('.ln8').attr('href','./e01mullerbrockmann/index.html');
+$('.ln9').attr('href','https://docs.google.com/spreadsheets/d/1pi55Tq7avJC-mmYdkzJB_RocdH6BSAnkr2IK3mOQb2g/edit?usp=sharing');
 $('.ln10').attr('href','./process/index.html');
 $('.ln11').attr('href','./githubredirect.html');
 
 
-
-/* Tooltip = Append Each Image
----------------------*/
-
 for (var i = 1; i < 10; i++) {
-    $('.ln0'+i).append('<span></span>');
+    $('.ln'+i).append('<span></span>');
 }
 
-$('.ln10 span').append('<span></span>');
-$('.ln11 span').append('<span></span>');
+$('.ln10').append('<span><img src="./img/scr10.png" /></span>');
+$('.ln11').append('<span><img src="./img/scr11.png" /></span>');
 
 for (var i = 1; i < 10; i++) {
-    $('.ln'+i+' span').append('<img src="./img/scr0'+i+'.png" />');
+    $('.ln'+i+' span').append('<img  src="./img/scr0'+i+'.png" />');
 }
-
-$('.ln10 span').append('<img src="./img/scr10.png" />');
-$('.ln11 span').append('<img src="./img/scr11.png" />');
-
-/* Tooltip = Hover Function
----------------------*/
 
 var tooltips = document.querySelectorAll('.tTp span');
 
@@ -109,6 +99,11 @@ $(".popup").click(function () {
 /* iframe manual overide
 -----------------------*/
 
+$(".ln1").click(function (e) {
+    e.preventDefault();
+    $('iframe').removeClass('ifr').addClass('ifrg');
+});
+
 $(".ln6").click(function (e) {
     e.preventDefault();
     $('iframe').removeClass('ifr').addClass('ifrg');
@@ -118,10 +113,11 @@ $(".ln9").click(function (e) {
     e.preventDefault();
     $('iframe').removeClass('ifr').addClass('ifrg');
 });
-$(".ln1").click(function (e) {
+$(".ln10").click(function (e) {
     e.preventDefault();
     $('iframe').removeClass('ifr').addClass('ifrg');
 });
+
 
 
 /* Hide hover image when Mobile
